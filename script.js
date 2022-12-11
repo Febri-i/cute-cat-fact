@@ -157,7 +157,7 @@ function generateFacts(id, factGap = 30, maxspeed = 1) {
 	const factHeight = factsBowl.offsetHeight * ((totalFact - 2) / totalFact);
 	const factWidth = factRatio * factHeight;
 
-	const totalFactContainer = Math.floor(factsBowl.offsetWidth / (factWidth + factGap));
+	const totalFactContainer = Math.ceil(factsBowl.offsetWidth / (factWidth + factGap));
 
 	factsBowl.style.gridTemplateColumns = `repeat(${totalFactContainer}, 1fr)`;
 
@@ -180,10 +180,11 @@ function generateFacts(id, factGap = 30, maxspeed = 1) {
 
 		factsBowl.appendChild(factsContainer);
 	}
-	window.requestAnimationFrame((timestamp) => {
-		lastTime = timestamp;
-		scrollTheShit(timestamp);
-	});
 }
 
 generateFacts("facts", gap, speed);
+window.addEventListener("resize", () => generateFacts("facts", gap, speed));
+window.requestAnimationFrame((timestamp) => {
+	lastTime = timestamp;
+	scrollTheShit(timestamp);
+});

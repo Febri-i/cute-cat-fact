@@ -93,8 +93,7 @@ h2 {
 	object-position: left;
 	object-fit: contain;
 	position: absolute;
-	top: 0;
-	height: 100%;
+	width: 500px;
 	bottom: 0;
 	filter: drop-shadow(0px 0px 100px white);
 }
@@ -155,10 +154,12 @@ h2 {
 	color: white;
 	display: block;
 	width: 100%;
+	font-family: Merriweather;
 	height: 100%;
 }
 
 .catFact div {
+	background-color: white;
 	width: 100%;
 	height: 100%;
 	background-repeat: no-repeat !important;
