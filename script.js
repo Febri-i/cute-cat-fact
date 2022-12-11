@@ -182,9 +182,9 @@ function generateFacts(id, factGap = 30, maxspeed = 1) {
 	}
 }
 
-generateFacts("facts", gap, speed);
-window.addEventListener("resize", () => generateFacts("facts", gap, speed));
-window.requestAnimationFrame((timestamp) => {
-	lastTime = timestamp;
-	scrollTheShit(timestamp);
-});
+// generateFacts("facts", gap, speed);
+// window.addEventListener("resize", () => generateFacts("facts", gap, speed));
+// window.requestAnimationFrame((timestamp) => {
+// 	lastTime = timestamp;
+// 	scrollTheShit(timestamp);
+// });
